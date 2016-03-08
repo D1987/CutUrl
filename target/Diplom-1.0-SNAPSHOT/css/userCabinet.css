@@ -1,0 +1,660 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/*HTML5 display-role reset for older browsers*/
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/**********************************************************************************************************************/
+
+body{
+    background-image: url("/images/much.jpg");
+    background-repeat: repeat;
+}
+                                                                /*HEAD*/
+/*center block*/
+.main{
+    width: 960px;
+    margin: 0 auto;
+}
+/*emblema*/
+#sci{
+    position: relative;
+    top:15px;
+    left: 30px;
+    transform: rotate(-45deg);
+}
+/*menu nvigation*/
+.navigation{
+    height: 65px;
+    background: #4F83D2;
+    position:relative;
+}
+.navigation ul li{
+    float: left;
+}
+.navigation ul li a{
+    color: #7ED47E;
+    padding: 0 10px;
+    font-size:18px;
+    font-family:cursive;
+    text-decoration: none;
+    line-height: 65px;
+    display: block;
+    position:relative;
+    left:80px;
+}
+.navigation ul li a:hover{
+    background: #ea112a;
+}
+/*menu*/
+.menu {
+    height: 65px;
+    line-height: 65px;
+    position: absolute;
+    top:-1px;
+    left: 600px;
+}
+/*user emblema*/
+#pic2{
+    position: relative;
+    top: 9px;
+    left:-9px
+}
+/*login*/
+#name{
+    font-size:25px;
+    font-family: cursive;
+    color: #7ED47E;
+    position: relative;
+    width:400px;
+    text-align:right;
+    left:240px;
+    top:-24px;
+}
+#n2{
+    font-size:25px;
+    font-family: cursive;
+    color: #7ED47E;
+}
+/*logout*/
+#razlog{
+    position: absolute;
+    width: 300px;
+    height: 155px;
+    background: #eee;
+    left: 1085px;
+    display: none;
+}
+/*butt to main str*/
+#butRedirSokr{
+    cursor: pointer;
+    height:65px;
+    background:#4F83D2;
+    color:#7ED47E;
+    font-family:cursive;
+    border: medium none;
+    font-size:18px;
+    position:relative;
+    left:80px;
+}
+#butRedirSokr:hover{
+    background: #ea112a;
+}
+                                                        /*CONTENT*/
+/*text*/
+#textCut{
+    font-size:25px;
+    font-family:cursive;
+    padding:5px 0 0 370px;
+    color: #6A789D;
+}
+.content{
+    min-height: 100%;
+    background: #1fe262;
+    border-top: 2px solid #fff;
+    padding-bottom: 90px;
+    transition: 1s;
+    position: relative;
+}
+/*update person data*/
+#update {
+    position: fixed;
+    background: #EE6123;
+    height: 200px;
+    width: 50px;
+    border-left: 1px solid #666;
+    top: 250px;
+    left: 0;
+    border-radius: 0 8px 8px 0;
+    transition: 1s;
+}
+#update:hover {
+    width: 55px;
+}
+#updateE {
+    position: fixed;
+    width: 311px;
+    height: 800px;
+    left: -315px;
+    top: 0;
+    background: #EE6123;
+    transition: 1s;
+}
+/*text on zakladke slide menu left*/
+#povorot{
+    transform:rotate(270deg);
+    cursor:pointer;
+    color: #fff;
+    margin:100px 0 0 -30px;
+    font-family: cursive;
+}
+#povorot1{
+    transform:rotate(270deg);
+    cursor:pointer;
+    color: #fff;
+    margin:-30px 0 0 15px;
+    font-family: cursive;
+}
+/*button close slide menu*/
+#bCloseU {
+    position: absolute;
+    left: 280px;
+    cursor: pointer;
+}
+/*form update*/
+.updateU {
+    position: absolute;
+    top: 120px;
+    left: 20px;
+}
+.updateU ul li{
+    padding: 5px;
+}
+.vvod{
+    width: 250px;
+    padding:5px;
+}
+#bUpUser{
+    margin: 0 0 0 80px;
+    border: medium none;
+    background: #6A789D;
+    color: #fff!important;
+    font-size: 14px;
+    font-family:cursive;
+    height: 35px;
+    padding: 0 20px!important;
+    cursor: pointer;
+}
+/*delete akkaunt*/
+#iconDeleUser{
+    position:relative;
+    left:25px;
+    top:350px;
+}
+#bDeleteUser{
+    position:absolute;
+    left: 75px;
+    border: medium none;
+    background: #6A789D;
+    color: #fff!important;
+    font-size: 14px;
+    font-family:cursive;
+    height: 35px;
+    padding: 0 20px!important;
+    cursor: pointer;
+}
+.deleteU {
+    position: absolute;
+    top: 350px;
+    left: 100px;
+}
+#DeleteU{
+    position: relative;
+    top: 400px;
+    left: 30px;
+    opacity: 0;
+}
+#bYDeleteU{
+    position:relative;
+    top:10px;
+    left:50px;
+    cursor: pointer;
+    border:medium none;
+    width:50px;
+    height:25px;
+    color:#fff;
+    background:#6A789D;
+    font-family:cursive;
+}
+#bNDeleteU {
+    position: relative;
+    top: 10px;
+    left: 60px;
+    cursor: pointer;
+    border: medium none;
+    width: 50px;
+    height: 25px;
+    color: #fff;
+    background: #6A789D;
+    font-family:cursive;
+}
+#textDelAkk{
+    font-size:20px;
+    font-family:cursive;
+    color:#014328;
+}
+.updateR {
+    position: relative;
+    top: 50px;
+    left: 25px;
+}
+#updateRef{
+    position: fixed;
+    height: 350px;
+    width: 310px;
+    top: 200px;;
+    left:1273px;
+    background: #444749;
+    display: none;
+}
+#upRef{
+    cursor: pointer;
+}
+/*button delete ref*/
+#delref{
+    cursor: pointer;
+}
+#updateRef ul li {
+   padding: 5px;
+}
+#bUpdateRef{
+    border: medium none;
+    background: #6A789D;
+    color: #fff!important;
+    font-size: 14px;
+    font-family:cursive;
+    height: 35px;
+    padding: 0 20px!important;
+    cursor: pointer;
+    margin:-15px 0 0 5px;
+}
+#bCloseR {
+    position: relative;
+    top: 0;
+    left: 280px;
+    cursor: pointer;
+}
+/*cut ref*/
+.inputR{
+    position: relative;
+    top: 20px;
+    left: 150px;
+    width: 610px;
+}
+.inputR input {
+    padding: 6px;
+    margin: 5px;
+    width: 600px;
+}
+#bSokr{
+    position:relative;
+    margin: 0 0 20px 5px;
+    left:250px;
+    width:150px;
+    border: medium none;
+    background: #6A789D;
+    color: #fff!important;
+    font-size: 14px;
+    height: 35px;
+    padding: 0 20px!important;
+    cursor: pointer;
+    font-family:cursive;
+}
+.cbutton--effect-novak::after {
+    background: rgba(111,148,182,0.25);
+}
+.cbutton--effect-novak.cbutton--click::after {
+    -webkit-animation: anim-effect-novak 0.5s forwards;
+    animation: anim-effect-novak 0.5s forwards;
+}
+/* Menu ssylok*/
+.side {
+    height: auto;
+    position: relative;
+    margin: 29px 0 0 60px;
+    width: 300px;
+    z-index: 2;
+}
+.side ul li{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.side a{
+    font-size: 22px;
+}
+.menu1 a{
+    text-decoration: none;
+    background: #3d3d3d;
+    color: #fff;
+    padding: 10px;
+    display: block;
+    border-bottom: 1px solid #666;
+    transition: 0.5s All;
+    font-family:cursive;
+}
+.menu1 a:hover{
+    background: #666;
+    padding: 10px 0 10px 20px;
+}
+/* podmenu*/
+.menu_list{
+    position: relative;
+}
+/*wraps for drop down*/
+.wrapDescr{
+    max-height: 120px;
+    overflow-y: auto;
+
+}
+table tr td{
+    font-size: 22px;
+    color:aqua;
+}
+.t1 {
+    table-layout: fixed;
+    width:100%;
+}
+/*for delete and update ref*/
+.tabl{
+    position: absolute;
+    right: 553px;
+    top: -20px;
+    background:#3D3D3D;
+}
+.tabl a{
+    padding: 10px;
+}
+.col{
+    width: 93px;
+    font-size:20px;
+    padding: 10px 0 10px 10px;
+    font-family: cursive;
+}
+/*drop menu*/
+.menuRDrop a{
+    border-bottom: none;
+}
+.menuRDrop{
+    background: #3d3d3d;
+}
+.menuRDrop{
+    position: absolute;
+    width: 595px;
+    left: 100%;
+    top:-9999em;
+    opacity: 0;
+    border-left: 3px solid #1FE262;
+    transition: 0.2s opasity;
+}
+.menu_list:hover .menuRDrop{
+    opacity: 1;
+    top: 0;
+}
+.menu_list::after{
+    content: " ";
+    position: absolute;
+    border: 8px solid;
+    border-color: transparent transparent transparent #eee;
+    transition: 0.5s;
+    top: 0.9em;
+    right: 0.1em;
+}
+.menu_list:hover::after{
+    transform: scaleX(-1);
+}
+/*for qr*/
+.col1{
+    padding: 10px 0 10px 10px;
+    vertical-align:top;
+    font-family: cursive;
+    color:#00FFFF;
+    width: 160px;
+}
+.col2{
+    color: #079CDC;
+    font-size: 20px;
+    border-bottom: 1px solid #666;
+    width: 442px;
+    word-wrap:break-word;
+    font-family: cursive;
+    padding:5px;
+}
+/*list tags*/
+#tags {
+    display: none;
+    position:absolute;
+    top: 253px;
+    left:363px;
+    width: 595px;
+    z-index: 1;
+    background: #3d3d3d;
+    overflow: hidden;
+}
+/*skrytye tags*/
+.spisokTags{
+    table-layout: fixed;
+    width:100%;
+}
+.spisokTags tr td{
+    padding: 5px;
+    font-family:cursive;
+    text-align:left;
+    color:#079CDC;
+}
+.col3{
+    color:#079CDC;
+    border-bottom:none;
+}
+.numRef{
+    word-wrap:break-word;
+}
+/*for div tags*/
+#clo{
+    position:absolute;
+    left:565px;
+}
+/*close spis tags*/
+#bCTags{
+    cursor: pointer;
+}
+.spisokTagsColor1{
+    background: #F5F5F5;
+}
+.spisokTagsColor2{
+    background: #FFF;
+}
+/*razloginitsya*/
+#logOut{
+    display: none;
+    position: absolute;
+    background: #727FA5;
+    left:769px;
+    height: 100px;
+    width: 190px;
+}
+#textLogOut{
+    position:relative;
+    left: 50px;
+    top: 20px;
+    color:#fff;
+}
+#bYes{
+    position:relative;
+    left:40px;
+    top: 30px;
+    cursor: pointer;
+    border:medium none;
+    background:#EE6123;
+    color:#fff;
+    width:55px;
+    height:30px;
+}
+#bNo{
+    position:relative;
+    left:100px;
+    cursor: pointer;
+    border:medium none;
+    background:#EE6123;
+    color:#fff;
+    width:55px;
+    height:30px;
+}
+/* udalenie ssylki*/
+#winDel{
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    top: 0;
+    right: 0;
+    display: none;
+}
+.delR{
+    position: absolute;
+    width: 300px;
+    height: 155px;
+    background: #fff;
+    left: 40%;
+    top: 40%
+}
+/*text for delete ref*/
+.parDelR{
+    position:relative;
+    font-size: 20px;
+    font-family: cursive;
+    left:65px;
+    top:-120px;
+    color:red;
+}
+/*buttons for delete ref*/
+.butR1{
+    position: relative;
+    padding:10px;
+    margin: -109px 2px 50px 50px;
+    width: 80px;
+    cursor:pointer;
+    border:medium none;
+    background:#6A789D;
+    color:#fff;
+    font-family: cursive;
+}
+.butR2{
+    position: relative;
+    padding:10px;
+    margin: 70px 40px 50px 160px;
+    width: 80px;
+    cursor:pointer;
+    font-family: cursive;
+    border:medium none;
+    background:#6A789D;
+    color:#fff;
+}
+/*butt teg person cabinet*/
+#bTag{
+    border: medium none;
+    background:#3D3D3D;
+    color:#079CDC;
+    font-family:cursive;
+    cursor:pointer;
+    font-size: 20px;
+}
+/*osibki sokrasheniya ssylki*/
+#erSylka{ font-family:cursive; margin-left:6px;color:red;text-shadow: 0 1px 1px #E6230E;}
+#erDescription{ font-family:cursive;}
+#ertag{ font-family:cursive;}
+/*errors update person data*/
+#erNewLog{ font-family:cursive;margin-left:6px;
+    color:#014328;}
+#erNewPass{
+    font-family:cursive;
+}
+#erNewPassRep{
+    font-family:cursive;
+}
+/*errors update desc and tags*/
+#erTagD{
+    font-family:cursive; margin-left:6px;color:red;text-shadow: 0 1px 1px #E6230E;
+}
+                                                                            /*PODVAL*/
+.podval{
+    position: absolute;
+    width: 960px;
+    margin: 0 auto;
+    height: 100px;
+    background: #444749;
+    border-top: 2px solid #fff;
+    font-family: cursive;
+}
+.podval p{
+    position: absolute;
+    color: #fff;
+    top: 60px;
+    left: 330px;
+}
+.tablePodval {
+    margin:10px 0 0 100px;
+}
+.tablePodval tr td{
+    padding:5px;
+}
+span{
+    position:relative;
+    top:-4px;
+    font-size: 17px;
+    color: #fff;
+}
+

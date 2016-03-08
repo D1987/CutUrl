@@ -1,0 +1,677 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/**********************************************************************************************************************/
+
+body{
+    background-image: url("/images/dscf3947.jpg");
+    background-repeat: repeat;
+    font-family: cursive;
+}
+                                                                                /*HEAD*/
+.main{
+    width: 960px;
+    margin: 0 auto;
+}
+/*emblema*/
+#sci{
+    position: relative;
+    top:15px;
+    left: 30px;
+    transform: rotate(-45deg);
+}
+/*navigation in menu*/
+.navigation{
+    height: 65px;
+    background: #4F83D2;
+    position:relative;
+}
+.navigation ul li{
+    float: left;
+}
+/*table for name*/
+#name{                                                  /*zamenit na firstchild*/
+    font-size:25px;
+    color: #7ED47E;
+    position:relative;
+    top:-2px;
+}
+/*name user*/
+.name{                                                 /*zamenit na firstchild*/
+    position: relative;
+    width:400px;
+    text-align:right;
+    left:-270px;
+}
+.navigation ul li a{
+    color: #7ED47E;
+    padding: 0 10px;
+    font-family: cursive;
+    text-decoration: none;
+    line-height: 65px;
+    display: block;
+    font-size:18px;
+    position: relative;
+    left: 150px;
+}
+.navigation ul li a:hover{
+    background: #ea112a;
+}
+.menu {
+    height: 65px;
+    line-height: 65px;
+    position: absolute;
+    top:-1px;
+    left: 600px;
+}
+/*user emblema*/
+#pic1{
+    position: relative;
+    top: 10px;
+}
+/*butt enter in person cabinet*/
+#butRedirUC{
+    cursor: pointer;
+    height:67px;
+    background:#4F83D2;
+    color:#7ED47E;
+    font-family:cursive;
+    border: medium none;
+    font-size:18px;
+    position:relative;
+    top:-67px;
+    left:170px;
+}
+#butRedirUC:hover{
+    background: #ea112a;
+}
+                                                                            /*CONTENT*/
+
+/*kollichestvo ssylok i klikov*/
+.kollRefClic{
+    background: #6A789D;
+    width:500px;
+    margin-left: 250px;
+    border-bottom:#1FE262 solid;
+}
+.text-animation li{
+    font-family: cursive;
+    text-transform:uppercase;
+    font-size: 20px;
+    color:#F90;
+    text-align: right;
+    opacity: 0;
+    -webkit-animation: textAnimation 6s linear infinite 0s;
+    -moz-animation: textAnimation 6s linear infinite 0s;
+    -o-animation: textAnimation 6s linear infinite 0s;
+    -ms-animation: textAnimation 6s linear infinite 0s;
+    animation: textAnimation 6s linear infinite 0s;
+    list-style-type:none;
+}
+.text-animation li:nth-child(2){
+    -webkit-animation-delay: 3s;
+    -moz-animation-delay: 3s;
+    -o-animation-delay: 3s;
+    -ms-animation-delay: 3s;
+    animation-delay: 3s;
+}
+@keyframes textAnimation {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(0px);
+    }
+    8% {
+        opacity: 1;
+        -webkit-transform: translateX(-100px);
+    }
+    17% {
+        opacity: 1;
+        -webkit-transform: translateX(-100px);
+    }
+    25% {
+        opacity: 0;
+        -webkit-transform: translateX(-300px);
+    }
+    90% { opacity: 0 }
+    100% { opacity: 0 }
+}
+/*zagolovok*/
+h1 {
+    padding: 5px;
+    font-size:28px;
+    font-family:cursive;
+    text-align: center;
+}
+/*text opisanie*/
+#text{
+    padding:5px 15px;
+    font-family:cursive;
+    font-size:20px;
+    text-indent:40px;
+    margin-bottom: 20px;
+}
+#content{
+    min-height: 100%;
+    background: #1fe262;
+    border-top: 2px solid #fff;
+    padding-bottom: 90px;
+}
+/*oformlenie spiskov*/
+.refAll ul{
+    padding: 0;
+    margin: 0;
+}
+/*div ssylok*/
+.refAll{
+    width: 500px;
+    background: #444749;
+    margin-left: 250px;
+}
+#picture {
+    display: inline-block;
+}
+/*pic sccir open spisok*/
+#arDown{
+    cursor:pointer;
+    position:relative;
+    left: 8px;
+    top: 10px;
+    transition: 1s;
+}
+#arDown:hover{
+    -moz-transform: rotate(180deg); /*Äëÿ Firefox */
+    -ms-transform: rotate(180deg); /* Äëÿ IE */
+    -webkit-transform: rotate(180deg); /* Äëÿ Safari, Chrome, iOS */
+    -o-transform: rotate(180deg); /* Äëÿ Opera */
+    transform: rotate(180deg);
+}
+.refAll ul li{
+    list-style: none;
+    border-bottom: 1px solid #eaeaea;
+    background: #444749;
+}
+.refAll ul li a{
+    font: 25px cursive;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 10px 10px 10px 80px;
+}
+.refAll ul li:hover{
+    background: #000000;
+}
+/*dlya vypodayushego bloka*/
+/*wraps for drop down*/
+.wrapDescr{
+    max-height: 120px;
+    overflow-y: auto;
+}
+#refAll1{
+    display: none;
+}
+#refAll1 table {
+    table-layout: fixed;
+    width:100%;
+}
+#refAll1 table tr{
+    border-bottom:#666 solid 1px;
+}
+#refAll1 table tr td{
+    padding: 10px;
+    vertical-align:top;
+}
+.yach1 {
+    color: aqua;
+    font: 20px cursive;
+    word-wrap:break-word;
+    width:150px;
+}
+.yach2 {
+    color: #079CDC;
+    font: 19px cursive;
+    word-wrap:break-word;
+}
+/*form for open div tags*/
+#col{
+    display: inline;
+    color: #079CDC;
+    font: 19px 'PT Sans';
+}
+/*dlya vypodayushego bloka*/
+.refAll > ul > li > ul > li:hover{
+    background: #444749;
+}
+/*dlya tegov b spiske tegov*/
+.colTag{
+    color: #079CDC;
+    word-wrap:break-word;
+}
+/*list tags*/
+/*butt tag*/
+#btag{
+    border:medium none;
+    background:#444749;
+    cursor:pointer;
+    color:#079CDC;
+    font: 19px cursive;
+}
+#tags {
+    display: none;
+    position:absolute;
+    top: 358px;
+    left:690px;
+    width: 580px;
+    height: 200px;
+}
+/*skrytye tegi*/
+.spisokTags{
+    table-layout: fixed;
+    width:100%;
+}
+.spisokTags tr td{
+    padding: 5px;
+    font-family:cursive;
+    /*border:#fff solid 2px;*/
+    text-align:left;
+    color:#079CDC;
+    font-size: 20px;
+ }
+.col1{
+    color:#00FFFF;
+    width: 160px;
+}
+.col2{
+    color:#079CDC;
+    border-bottom:none;
+}
+#clo{
+    position:absolute;
+    left:550px;
+}
+/*img close spisok tegov*/
+#clk{
+    cursor: pointer;
+}
+.spisokTagsColor1{
+    background: #F5F5F5;
+}
+.spisokTagsColor2{
+    background: #FFF;
+}
+/*popup forma regist*/
+#borderRegistr{
+    border: 1px solid #EBF0F4;
+    text-decoration: none;
+}
+#borderEnter{
+    border: 1px solid #EBF0F4;
+    text-decoration: none;
+}
+#borderPassw{
+    border: 1px solid #EBF0F4;
+    text-decoration: none;
+}
+#popup{
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    top: 0;
+    right: 0;
+    display: none;
+    pointer-events: none;
+}
+#popup:target{
+    pointer-events: auto;
+    display: block;
+}
+#popup1{
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    top: 0;
+    right: 0;
+    display: none;
+    pointer-events: none;
+}
+#popup1:target{
+    pointer-events: auto;
+    display: block;
+}
+#popup2{
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    top: 0;
+    right: 0;
+    display: none;
+    pointer-events: none;
+}
+#popup2:target{
+    pointer-events: auto;
+    display: block;
+}
+.window {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: #FBFCFC;
+    left: 50%;
+    top:50%;
+    margin-left: -200px;
+    margin-top: -200px;
+}
+.window1 {
+    position: absolute;
+    width: 400px;
+    height: 270px;
+    background: #FBFCFC;
+    left: 50%;
+    top:50%;
+    margin-left: -200px;
+    margin-top: -200px;
+}
+.popRegistr:hover{
+    cursor: pointer;
+}
+.close {
+    position: relative;
+    left:380px;
+    top: 5px;
+}
+/*vrashenie knopki zakrytiya*/
+@keyframes rota {
+    from
+    {
+        transform: rotate(0deg);
+    }
+    to
+     {
+         transform: rotate(360deg);
+     }
+}
+.close:hover {
+    animation-name: rota;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+    cursor: pointer;
+}
+/*remaind password*/
+.form1 {
+    max-width: 330px;
+    margin: auto;
+}
+.form1 input{
+    width: 300px;
+    margin-bottom: 5px;
+    height: 35px;
+    padding: 5px 10px;
+    border: 1px solid #c9c9c9;
+}
+/* iconka spravka*/
+#iconE {
+    position:relative;
+    top: 8px;
+    left:8px;
+    cursor: help;
+}
+#iconP {
+    position:relative;
+    top: 8px;
+    left:8px;
+    cursor: help;
+}
+/*spravka*/
+.helpEmail{
+    opacity: 0;
+    position: absolute;
+    top: 60px;
+    left: 380px;
+    text-align: left;
+    padding: 15px;
+    width: 270px;
+    color: #fff;
+    background: rgba(0,0,0,.8);
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-transition: opacity .7s;
+    -webkit-transition: opacity .7s;
+    transition: opacity .7s;
+}
+.helpEmail:after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-right: 10px solid gray;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    left:-10px;
+}
+#iconE:hover + .helpEmail{
+     opacity: 1;
+}
+#iconL {
+    position:relative;
+    top: 8px;
+    left:8px;
+    cursor: help;
+}
+.helpLogin{
+    opacity: 0;
+    position: absolute;
+    top: 55px;
+    left: 380px;
+    text-align: left;
+    padding: 15px;
+    width: 270px;
+    color: #fff;
+    background: rgba(0,0,0,.8);
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-transition: opacity .7s;
+    -webkit-transition: opacity .7s;
+    transition: opacity .7s;
+}
+.helpLogin:after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-right: 10px solid gray;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    left:-10px;
+}
+#iconL:hover + .helpLogin {
+    opacity:1;
+}
+#iconP {
+    position:relative;
+    top: 8px;
+    left:8px;
+    cursor: help;
+}
+.helpPassword{
+    opacity:0;
+    position: absolute;
+    top: 130px;
+    left: 380px;
+    text-align: left;
+    padding: 15px;
+    width: 270px;
+    color: #fff;
+    background: rgba(0,0,0,.8);
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-transition: opacity .7s;
+    -webkit-transition: opacity .7s;
+    transition: opacity .7s;
+}
+.helpPassword:after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-right: 10px solid gray;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    left:-10px;
+}
+#iconP:hover + .helpPassword {
+    opacity:1;
+}
+.dopMenu li{
+    position:relative;
+    float: left;
+    margin: 30px 1px;
+    left:-4px;
+}
+
+.dopMenu li a{
+    color: #727a90;
+    font-size: 17px;
+    padding: 5px;
+}
+.buttEnter{
+    background: #4ebb5b;
+    border: medium none;
+    color: #fff!important;
+    font-size: 14px;
+    height: 35px;
+    padding: 0 20px!important;
+    cursor: pointer;
+    margin:5px 0;
+}
+/*oshibki registracii*/
+#erEmail{
+    display:none;
+    color:red;
+    text-shadow: 0 1px 1px #E6230E;
+}
+#erLogin{
+    display:none;
+    color:red;
+    text-shadow: 0 1px 1px #E6230E;
+}
+#erPassword{
+    display:none;
+    color:red;
+    text-shadow: 0 1px 1px #E6230E;
+}
+#erRepeatPass{
+    display:none;
+    color:red;
+    text-shadow: 0 1px 1px #E6230E;
+}
+/*oshibki vhoda*/
+#erLoginE{
+    display:none;
+    color:red;
+    text-shadow: 0 1px 1px #E6230E;
+    margin:5px;
+}
+
+#erPasswordE{
+    display:none;
+    color:red;
+    text-shadow: 0px 1px 1px #E6230E;
+    margin:5px;
+}
+
+/*zabyl parol*/
+#erZabulPassw{
+    display:none;
+    color:red;
+    text-shadow: 0 1px 1px #E6230E;
+    margin:5px;
+}
+
+#erZabulPassw1{
+    display:none;
+    color:red;
+    text-shadow: 0px 1px 1px #E6230E;
+    margin:5px;
+}
+                                                                                /*PODVAL*/
+.podval{
+    position: absolute;
+    width: 960px;
+    margin: 0 auto;
+    height: 100px;
+    background: #444749;
+    border-top: 2px solid #fff;
+}
+.podval p{
+    position: relative;
+    color: #fff;
+    top: 20px;
+    left: 300px;
+}
+.tablePodval {
+    margin:10px 0 0 100px;
+}
+.tablePodval tr td{
+    padding:5px;
+}
+span{
+    position:relative;
+    top:-4px;
+    font-size: 17px;
+    color: #fff;
+}

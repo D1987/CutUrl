@@ -8,7 +8,8 @@ sokr.by. Т.к. разработка велась на локальном сервере сокращенная ссылка выглядит
 Apache Tomcat 8, servlets -сервер
 MySql WorkBench 6, JDBC -бд
 css/html/js/jquery, jsp/jstl/useBean -клиент
-IntelliJ IDEA 14
+IntelliJ IDEA 14 -среда разработки
+Maven 3 -сборка проекта
 
 Скрипты для бд находятся в папке DB. 
 БД состоит из 3 таблиц: reference(для работы со ссылками), users(для пользователей), email_services(почтовые сервисы).
