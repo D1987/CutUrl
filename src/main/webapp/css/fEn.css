@@ -1,0 +1,59 @@
+body{
+    background: #403D4C;
+}
+.buttEnter{
+    border: medium none;
+    color:#fff;
+    background:#FFA500;
+    position:absolute;
+    top:350px;
+    left: 700px;
+    cursor:pointer;
+    font-size:22px;
+    font-family:cursive;
+    padding:5px;
+    text-decoration:none;
+}
+.buttEnter2{
+    border: medium none;
+    color:#fff;
+    background:#FFA500;
+    position:absolute;
+    top:350px;
+    left: 600px;
+    cursor:pointer;
+    font-size:22px;
+    font-family:cursive;
+    padding:5px;
+    text-decoration:none;
+}
+div p{
+    font-size: 20px;
+    font-family: cursive;
+    color: #fff;
+    position:absolute;
+    top:290px;
+    left: 400px;
+}
+#p1{
+    font-size: 20px;
+    font-family: cursive;
+    color: #fff;
+    position:absolute;
+    top:290px;
+    left: 530px;
+}
+#b{
+    background: #3F5D81;
+    background-image: url("/images/404-Page-not-found.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#p2{
+    font-size: 30px;
+    font-family: cursive;
+    color: #fff;
+    position:absolute;
+    top:70px;
+    left: 650px;
+}
