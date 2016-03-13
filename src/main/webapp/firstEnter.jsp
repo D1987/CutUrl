@@ -5,7 +5,7 @@
     <title>Приветствие</title>
     <link href="css/fEn.css" type="text/css" rel="stylesheet"/>
   <script src="js/jquery.js"></script>
-  <script src="js/index.js"></script>
+  <script charset="windows-1251" src="js/index.js"></script>
 </head>
 <body>
     <form class="form1" method="post" action="http://localhost:81/userCabinet.jsp" id="formRegistr">

@@ -150,7 +150,7 @@
                     <c:catch>
                     <c:set var="allRefere" value="${allRef.showAllRefer()}"/>
                     <c:forEach var="entry" items="${allRefere}">
-                    <li><img src="images/cut.png" id="arDown"><a href="http://localhost:81/ReferRedirect?id=${entry.key}" target="_blank"  id="picture">${entry.value.getCut_ref()}</a>
+                    <li><img src="images/cut.png" id="arDown"><p id="open">Нажать</p><a href="http://localhost:81/ReferRedirect?id=${entry.key}" target="_blank"  id="picture">${entry.value.getCut_ref()}</a>
                         <ul id="refAll1">
                             <li>
                                 <table>
