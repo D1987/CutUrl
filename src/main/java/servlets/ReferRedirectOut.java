@@ -40,14 +40,14 @@ public class ReferRedirectOut extends HttpServlet
             rs = ps.executeQuery();
 
            if (!rs.next()) {
-               resp.sendRedirect("http://localhost:81/notFound.jsp");
+               resp.sendRedirect("../notFound.jsp");
 
             } else{
                 rs = ps.executeQuery();
                 while (rs.next()) {
                     id = rs.getInt(2);
                 }
-                resp.sendRedirect("http://localhost:81/ReferRedirect?id="+id);
+                resp.sendRedirect("../ReferRedirect?id="+id);
             }
         } catch (SQLException e) {
             e.printStackTrace();

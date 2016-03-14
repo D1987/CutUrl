@@ -28,7 +28,7 @@ function clearP(){
 //ajax proverka polei registracii
 function redirectRegistr(){
     $.ajax({
-        url:"http://localhost:81/UserRegistrac",
+        url:"../../UserRegistrac",
         type: "post",
         data:({login: $('#eLogin').val(), password:$('#ePassword').val(), mail:$('#eEmail').val(), password2:$('#eRepeatPass').val()}),
         dataType:"html",
@@ -130,7 +130,7 @@ function redirectRegistr(){
 // ajax first vhod v person cabinet
 function pervuyVhod(){
     $.ajax({
-        url:"http://localhost:81/UserFirstEnter",
+        url:"../../UserFirstEnter",
         type: "post",
         data:({login: $('#eLogin').val(), password:$('#ePassword').val(), mail:$('#eEmail').val()}),
         dataType:"html",
@@ -143,7 +143,7 @@ function pervuyVhod(){
 // ajax otpravka dannyh na vhod
 function redirectEnter(){
     $.ajax({
-        url:"http://localhost:81/UserAvtoriz",
+        url:"../../UserAvtoriz",
         type: "post",
         data:({login: $('#loginE').val(), password:$('#passwordE').val()}),
         dataType:"html",
@@ -178,7 +178,7 @@ function redirectEnter(){
 /*ajax zabyl parol*/
 function zabylPassword(){
     $.ajax({
-        url:"http://localhost:81/UserSekret",
+        url:"../../UserSekret",
         type: "post",
         data:({mail: $('#eZabulPassw').val(),password: $('#newPassw').val()}),
         dataType:"html",
@@ -328,7 +328,7 @@ function showDelRef(element_id,element_id2,num) {
 //ajax udalenie ref
 function deleteRef(){
     $.ajax({
-        url:"http://localhost:81/ReferDelete",
+        url:"../../ReferDelete",
         type: "post",
         data:({id: $('#del').val(),idUser: $('#idUs').val()}),
         dataType:"html",
@@ -343,7 +343,7 @@ function hideDelRef(element_id) {
 //ajax cut refrences
 function cutssulk(){
     $.ajax({
-        url:"http://localhost:81/ReferCut",
+        url:"../../ReferCut",
         type: "post",
         data:({login: $('#login').val(),ssylka:$('#ref').val(),description: $('#desc').val(),tag:$('#tag').val()}),
         dataType:"html",
@@ -364,7 +364,7 @@ function cutssulk(){
 //ajax update person data
 function updatePersonData(){
     $.ajax({
-        url:"http://localhost:81/UserUpdate",
+        url:"../../UserUpdate",
         type: "post",
         data:({login: $('#loginNew').val(),password:$('#passwordNew').val(),password1:$('#passwordNewRepeate').val(),loginOld:$('#loginOld').val(),idU:$('#idU').val()}),
         dataType:"html",
@@ -414,7 +414,7 @@ function updatePersonData(){
 //ajax update description ssylki
 function updateDescAndTags(){
     $.ajax({
-        url:"http://localhost:81/ReferUpdate",
+        url:"../../ReferUpdate",
         type: "post",
         data:({login: $('#loginUpdRef').val(),description:$('#description').val(),tag:$('#tagU').val(),idR:$('#val').val()}),
         dataType:"html",

@@ -73,7 +73,7 @@
 
             <!-------------delete akkaunt------------->
             <img src="images/user-blue-delete.png" id="iconDeleUser"><button class="deleteU" id="bDeleteUser" onclick="deleteAkkaunt('DeleteU')">Удалить аккаунт</button>
-            <form name="Form2" method="post" action="http://localhost:81/UserDelete" id="DeleteU">
+            <form name="Form2" method="post" action="../../UserDelete" id="DeleteU">
                     <p id="textDelAkk">Вы действительно
                     хотите удалить аккаунт?
                     Все Ваши ссылки будут удалены.</p>
@@ -134,7 +134,7 @@
                 <c:set var="pData" value="${personData.vuborkaPersonData(pageContext.request)}"/>
                 <c:forEach var="entry" items="${pData}">
             <ul class="menu1">
-                <li class="menu_list"><a href="http://localhost:81/ReferRedirect?id=${entry.key}" target="_blank">${entry.value.getCut_ref()}</a>
+                <li class="menu_list"><a href="../../ReferRedirect?id=${entry.key}" target="_blank">${entry.value.getCut_ref()}</a>
                     <ul class="menuRDrop">
                         <li>
                             <table class="t1">
@@ -148,7 +148,7 @@
                                 <tr>
                                     <td class="col">Тег: </td>
                                     <td class="col2">
-                                        <form name="RedUserCab" method="post" action="http://localhost:81/UserTags">
+                                        <form name="RedUserCab" method="post" action="../../UserTags">
                                             <input type="hidden" name="loginTags" value="${login}">
                                             <input type="hidden" name="login" value="${login}">
                                             <input type="hidden" name="tag" value="${entry.value.getTag()}">
@@ -186,7 +186,7 @@
             <div id="clo">
                 <c:if test="${not empty tagsU}">
                 <script> runIt1() </script >
-                <form name="clean" method="post" action="http://localhost:81/UserTags">
+                <form name="clean" method="post" action="../../UserTags">
                     <input type="hidden" name="loginTags" value="${login}">
                     <input type="hidden" name="where" value="${where}">
                     <img src="images/standardbutton-close-32.png" id="bCTags">
@@ -204,7 +204,7 @@
                         </tr>
                         <tr class="spisokTagsColor1">
                             <td class="col1">Ссылка: </td>
-                            <td class="col3"><a href="http://localhost:81/ReferRedirect?id=${entry.key.getId()}" target="_blank" >${entry.value.getCut_ref()}</a></td>
+                            <td class="col3"><a href="../../ReferRedirect?id=${entry.key.getId()}" target="_blank" >${entry.value.getCut_ref()}</a></td>
                         </tr>
                         <tr class="spisokTagsColor1">
                             <td class="col1">Тег: </td>
@@ -219,7 +219,7 @@
                         </tr>
                         <tr class="spisokTagsColor2">
                             <td class="col1">Ссылка: </td>
-                            <td class="col3"><a href="http://localhost:81/ReferRedirect?id=${entry.key.getId()}" target="_blank">${entry.value.getCut_ref()}</a></td>
+                            <td class="col3"><a href="../../ReferRedirect?id=${entry.key.getId()}" target="_blank">${entry.value.getCut_ref()}</a></td>
                         </tr>
                         <tr class="spisokTagsColor2">
                             <td class="col1">Тег: </td>
