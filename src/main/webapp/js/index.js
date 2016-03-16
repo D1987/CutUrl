@@ -239,6 +239,7 @@ $(document).ready(function () {
 });
 //poyavlenie spiska tegov
 function runIt() {
+	$("#tags").slideDown("fast");
     $(".refAll").animate({marginLeft:'-=230',width: "350px"},1000);
     $(".refAll").find('a').animate({'padding-left' : "10px"},1000);
     setTimeout("$('#tags').slideDown('slow')", 850);
