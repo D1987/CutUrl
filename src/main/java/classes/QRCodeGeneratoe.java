@@ -20,7 +20,7 @@ public class QRCodeGeneratoe {
 
     synchronized public static File qrGeneration(String ref) {
 
-        String filePath = "D:/DIMA/IT/IPO/Diplom/Diplom/trash/qr.png";
+        String filePath = "D:DIMA/IT/IPO/Diplom/ServiceURL-JDBC/src/main/webapp/images/qr.png";
         int size = 100;
         String fileType = "png";
         File myFile = new File(filePath);

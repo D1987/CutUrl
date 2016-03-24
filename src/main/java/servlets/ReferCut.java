@@ -23,7 +23,8 @@ public class ReferCut extends HttpServlet {
     {
         String login = request.getParameter("login");
         String ssylka = request.getParameter("ssylka");
-        Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+        String tag = request.getParameter("tag");
+        Map<Integer, Integer> map;
         PrintWriter out;
         int id;
         int idU = 0;
@@ -36,6 +37,14 @@ public class ReferCut extends HttpServlet {
         else if(!provURL(ssylka)) {
         out = response.getWriter();
         out.print("neCorr");
+        }
+        else if(tag.length()>20) {
+            out = response.getWriter();
+            out.print("dlinna");
+        }
+        else if(tag.contains("#") || tag.contains(" ")) {
+            out = response.getWriter();
+            out.print("invalidChar");
         }
         else
         {
@@ -59,7 +68,7 @@ public class ReferCut extends HttpServlet {
                         insertCopyRef(request, response, ssylka, id, idR);
                     }
                 }
-                else {insertRefrence(request, response, ssylka, sokr, file, id, idR);}
+                else {insertRefrence(request, response, ssylka, sokr,tag, file, id, idR);}
         }
     }
     //proverka ili long ref existane
@@ -117,7 +126,7 @@ public class ReferCut extends HttpServlet {
         return sokr;
     }
 
-    public void insertRefrence(HttpServletRequest req, HttpServletResponse resp,String ssylka,String sokr, File file,int id,int idR) throws ServletException, IOException {
+    public void insertRefrence(HttpServletRequest req, HttpServletResponse resp,String ssylka,String sokr,String tag, File file,int id,int idR) throws ServletException, IOException {
         String login = req.getParameter("login");
         PrintWriter out;
         PreparedStatement ps = null;
@@ -130,7 +139,7 @@ public class ReferCut extends HttpServlet {
             ps.setString(1,ssylka);
             ps.setString(2,sokr);
             ps.setString(3,req.getParameter("description"));
-            ps.setString(4,req.getParameter("tag"));
+            ps.setString(4,tag);
             ps.setBlob(5, inputStream);
             ps.setInt(6, id);
             ps.executeUpdate();

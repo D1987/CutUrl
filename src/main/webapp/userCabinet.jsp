@@ -73,7 +73,7 @@
 
             <!-------------delete akkaunt------------->
             <img src="images/user-blue-delete.png" id="iconDeleUser"><button class="deleteU" id="bDeleteUser" onclick="deleteAkkaunt('DeleteU')">Удалить аккаунт</button>
-            <form name="Form2" method="post" action="../../UserDelete" id="DeleteU">
+            <form name="Form2" method="post" action="UserDelete" id="DeleteU">
                     <p id="textDelAkk">Вы действительно
                     хотите удалить аккаунт?
                     Все Ваши ссылки будут удалены.</p>
@@ -90,7 +90,7 @@
             <form id="Form3" class="updateR">
                 <ul>
                     <li><input type="text" id="description" placeholder="Описание" value="" class="vvod"></li>
-                    <li><input type="text" id="tagU" placeholder="Тег" value="" class="vvod"></li>
+                    <li><input type="text" id="tagU" placeholder="Хештег" value="" class="vvod"></li>
                     <p id="erTagD"></p>
                     <li><input type="hidden"  value="" id="val"></li>
                     <li><input type="hidden" id="loginUpdRef" value="${login}"></li>
@@ -121,8 +121,8 @@
             <p id="erSylka"></p>
             <input type="text" name="description" value="" placeholder="Комментарий" id="desc"><br>
             <p id="erDescription"></p>
-            <input type="text" name="tag" placeholder="Тег" id="tag"><br>
-            <p id="ertag"></p>
+            <input type="text" name="tag" placeholder="Хештег. Длинна не более 20 символов, без # и пробелов" id="tag"><br>
+            <p id="erTag"></p>
             <input type="hidden" id="login" value="${login}"><br>
             <button type="button" id="bSokr" class="cbutton cbutton--effect-novak" onclick="cutssulk()">Сократить</button>
         </form>
@@ -134,7 +134,7 @@
                 <c:set var="pData" value="${personData.vuborkaPersonData(pageContext.request)}"/>
                 <c:forEach var="entry" items="${pData}">
             <ul class="menu1">
-                <li class="menu_list"><a href="../../ReferRedirect?id=${entry.key}" target="_blank">${entry.value.getCut_ref()}</a>
+                <li class="menu_list"><a href="ReferRedirect?id=${entry.key}" target="_blank">${entry.value.getCut_ref()}</a>
                     <ul class="menuRDrop">
                         <li>
                             <table class="t1">
@@ -148,7 +148,7 @@
                                 <tr>
                                     <td class="col">Тег: </td>
                                     <td class="col2">
-                                        <form name="RedUserCab" method="post" action="../../UserTags">
+                                        <form name="RedUserCab" method="post" action="UserTags">
                                             <input type="hidden" name="loginTags" value="${login}">
                                             <input type="hidden" name="login" value="${login}">
                                             <input type="hidden" name="tag" value="${entry.value.getTag()}">
@@ -186,7 +186,7 @@
             <div id="clo">
                 <c:if test="${not empty tagsU}">
                 <script> runIt1() </script >
-                <form name="clean" method="post" action="../../UserTags">
+                <form name="clean" method="post" action="UserTags">
                     <input type="hidden" name="loginTags" value="${login}">
                     <input type="hidden" name="where" value="${where}">
                     <img src="images/standardbutton-close-32.png" id="bCTags">
@@ -204,7 +204,7 @@
                         </tr>
                         <tr class="spisokTagsColor1">
                             <td class="col1">Ссылка: </td>
-                            <td class="col3"><a href="../../ReferRedirect?id=${entry.key.getId()}" target="_blank" >${entry.value.getCut_ref()}</a></td>
+                            <td class="col3"><a href="ReferRedirect?id=${entry.key.getId()}" target="_blank" >${entry.value.getCut_ref()}</a></td>
                         </tr>
                         <tr class="spisokTagsColor1">
                             <td class="col1">Тег: </td>
@@ -219,7 +219,7 @@
                         </tr>
                         <tr class="spisokTagsColor2">
                             <td class="col1">Ссылка: </td>
-                            <td class="col3"><a href="../../ReferRedirect?id=${entry.key.getId()}" target="_blank">${entry.value.getCut_ref()}</a></td>
+                            <td class="col3"><a href="ReferRedirect?id=${entry.key.getId()}" target="_blank">${entry.value.getCut_ref()}</a></td>
                         </tr>
                         <tr class="spisokTagsColor2">
                             <td class="col1">Тег: </td>

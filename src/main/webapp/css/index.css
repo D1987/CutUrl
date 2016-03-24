@@ -207,6 +207,13 @@ h1 {
     padding: 0;
     margin: 0;
 }
+/*block open*/
+#open{
+    position: absolute;
+    background: #F9992B;
+    display: none;
+    border: #000000 solid 1px;
+}
 /*div ssylok*/
 .refAll{
     width: 500px;

@@ -8,7 +8,7 @@
   <script charset="windows-1251" src="js/index.js"></script>
 </head>
 <body>
-    <form class="form1" method="post" action="../../userCabinet.jsp" id="formRegistr">
+    <form class="form1" method="post" action="userCabinet.jsp" id="formRegistr">
       <input type="hidden" name="mail"   value="${param.mail}" id="eEmail">
       <input type="hidden" name="login"  value="${param.login}" id="eLogin">
       <input type="hidden" name="password"  value="${param.hash}" id="ePassword">

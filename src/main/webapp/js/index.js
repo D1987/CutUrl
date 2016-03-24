@@ -28,7 +28,7 @@ function clearP(){
 //ajax proverka polei registracii
 function redirectRegistr(){
     $.ajax({
-        url:"../../UserRegistrac",
+        url:"UserRegistrac",
         type: "post",
         data:({login: $('#eLogin').val(), password:$('#ePassword').val(), mail:$('#eEmail').val(), password2:$('#eRepeatPass').val()}),
         dataType:"html",
@@ -130,7 +130,7 @@ function redirectRegistr(){
 // ajax first vhod v person cabinet
 function pervuyVhod(){
     $.ajax({
-        url:"../../UserFirstEnter",
+        url:"UserFirstEnter",
         type: "post",
         data:({login: $('#eLogin').val(), password:$('#ePassword').val(), mail:$('#eEmail').val()}),
         dataType:"html",
@@ -143,7 +143,7 @@ function pervuyVhod(){
 // ajax otpravka dannyh na vhod
 function redirectEnter(){
     $.ajax({
-        url:"../../UserAvtoriz",
+        url:"UserAvtoriz",
         type: "post",
         data:({login: $('#loginE').val(), password:$('#passwordE').val()}),
         dataType:"html",
@@ -178,7 +178,7 @@ function redirectEnter(){
 /*ajax zabyl parol*/
 function zabylPassword(){
     $.ajax({
-        url:"../../UserSekret",
+        url:"UserSekret",
         type: "post",
         data:({mail: $('#eZabulPassw').val(),password: $('#newPassw').val()}),
         dataType:"html",
@@ -329,7 +329,7 @@ function showDelRef(element_id,element_id2,num) {
 //ajax udalenie ref
 function deleteRef(){
     $.ajax({
-        url:"../../ReferDelete",
+        url:"ReferDelete",
         type: "post",
         data:({id: $('#del').val(),idUser: $('#idUs').val()}),
         dataType:"html",
@@ -344,7 +344,7 @@ function hideDelRef(element_id) {
 //ajax cut refrences
 function cutssulk(){
     $.ajax({
-        url:"../../ReferCut",
+        url:"ReferCut",
         type: "post",
         data:({login: $('#login').val(),ssylka:$('#ref').val(),description: $('#desc').val(),tag:$('#tag').val()}),
         dataType:"html",
@@ -356,6 +356,12 @@ function cutssulk(){
             else if(errorEnter === "neCorr"){
                 document.getElementById('erSylka').innerHTML = 'Проверьте корректность ссылки!';
             }
+            else if(errorEnter === "dlinna"){
+                document.getElementById('erTag').innerHTML = 'Длинна хештега более 20 символов!'
+            }
+            else if(errorEnter === "invalidChar"){
+                document.getElementById('erTag').innerHTML = 'Присутствует неверный символ # или пробел!'
+            }
             else {
                 location.reload();
             }
@@ -365,7 +371,7 @@ function cutssulk(){
 //ajax update person data
 function updatePersonData(){
     $.ajax({
-        url:"../../UserUpdate",
+        url:"UserUpdate",
         type: "post",
         data:({login: $('#loginNew').val(),password:$('#passwordNew').val(),password1:$('#passwordNewRepeate').val(),loginOld:$('#loginOld').val(),idU:$('#idU').val()}),
         dataType:"html",
@@ -415,7 +421,7 @@ function updatePersonData(){
 //ajax update description ssylki
 function updateDescAndTags(){
     $.ajax({
-        url:"../../ReferUpdate",
+        url:"ReferUpdate",
         type: "post",
         data:({login: $('#loginUpdRef').val(),description:$('#description').val(),tag:$('#tagU').val(),idR:$('#val').val()}),
         dataType:"html",
@@ -423,6 +429,12 @@ function updateDescAndTags(){
             if (errorEnter === "pustyePolya"){
                 document.getElementById('erTagD').style.display = 'block';
                 document.getElementById('erTagD').innerHTML = 'Пустые поля!';
+            }
+            else if(errorEnter === "dlinna"){
+                document.getElementById('erTagD').innerHTML = 'Неверная длинна хештега!'
+            }
+            else if(errorEnter === "invalidChar"){
+                document.getElementById('erTagD').innerHTML = 'Присутствует неверный символ # или пробел!'
             }
             else
             {
@@ -433,7 +445,6 @@ function updateDescAndTags(){
 }
 //skryt spisok tegov/ pokazat description/  uvelichit content
 $(document).ready(function () {
-    var hContent = $('.content').height();
     $(".menu_list").mouseenter(function(){
         $("#tags").hide('fast');
     });

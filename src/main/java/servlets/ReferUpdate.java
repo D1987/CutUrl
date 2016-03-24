@@ -33,6 +33,14 @@ public class ReferUpdate extends HttpServlet {
             out = resp.getWriter();
             out.print("pustyePolya");
         }
+        else if(tag.length()>20) {
+            out = resp.getWriter();
+            out.print("dlinna");
+        }
+        else if(tag.contains("#") || tag.contains(" ")) {
+            out = resp.getWriter();
+            out.print("invalidChar");
+        }
         else {
 
             DBConnect connect = new DBConnect();

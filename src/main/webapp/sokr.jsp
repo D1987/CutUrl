@@ -48,7 +48,7 @@
     <div id="popup">
         <div class="window">
             <a href="#"> <img src="images/CrossClose.png" class="close"></a>
-            <form class="form1" method="post" action="../../userCabinet.jsp" id="formRegistr">
+            <form class="form1" method="post" action="userCabinet.jsp" id="formRegistr">
                 <ul class="dopMenu">
                     <li><a href="#" id="borderRegistr">Регистрация</a></li>
                     <li><a href="#popup1" onclick="clearP()">Войти</a></li>
@@ -81,7 +81,7 @@
     <div id="popup1">
         <div class="window1">
             <a href="#"> <img src="images/CrossClose.png" class="close"></a>
-            <form class="form1" method="post" action="../../userCabinet.jsp" id="formEnter">
+            <form class="form1" method="post" action="userCabinet.jsp" id="formEnter">
                 <ul class="dopMenu">
                     <li><a href="#popup" onclick="clearP()">Регистрация</a></li>
                     <li><a href="#" id="borderEnter">Войти</a></li>
@@ -150,7 +150,7 @@
                     <c:catch>
                     <c:set var="allRefere" value="${allRef.showAllRefer()}"/>
                     <c:forEach var="entry" items="${allRefere}">
-                    <li><img src="images/cut.png" id="arDown"><p id="open">Нажать</p><a href="../../ReferRedirect?id=${entry.key}" target="_blank"  id="picture">${entry.value.getCut_ref()}</a>
+                    <li><img src="images/cut.png" id="arDown"><p id="open">Нажать</p><a href="ReferRedirect?id=${entry.key}" target="_blank"  id="picture">${entry.value.getCut_ref()}</a>
                         <ul id="refAll1">
                             <li>
                                 <table>
@@ -172,7 +172,7 @@
                                     <tr>
                                         <td class="yach1">Тег:</td>
                                         <td class="yach2">
-                                            <form name="RedUserCab" method="post" action="../../UserTags" id="col">
+                                            <form name="RedUserCab" method="post" action="UserTags" id="col">
                                                 <input type="hidden" name="loginTags" value="${entry.value.getLogin()}" id="lT">
                                                 <input type="hidden" name="login" value="${login}" id="l">
                                                 <input type="hidden" name="tag" value="${entry.value.getTag()}" id="t">
@@ -201,7 +201,7 @@
         <script> runIt() </script >
         <div id="tags">
             <div id="clo">
-                <form name="clean" method="post" action="../../UserTags">
+                <form name="clean" method="post" action="UserTags">
                     <input type="hidden" name="where" value="${where}">
                     <img src="images/standardbutton-close-32.png" id="clk">
                 </form>
@@ -217,7 +217,7 @@
                             </tr>
                             <tr class="spisokTagsColor1">
                                 <td class="col1">Ссылка: </td>
-                                <td class="col2"><a href="../../ReferRedirect?id=${entry.key.getId()}" target="_blank">${entry.value.getCut_ref()}</a></td>
+                                <td class="col2"><a href="ReferRedirect?id=${entry.key.getId()}" target="_blank">${entry.value.getCut_ref()}</a></td>
                             </tr>
                             <tr class="spisokTagsColor1">
                                 <td class="col1">Тег: </td>
@@ -232,7 +232,7 @@
                             </tr>
                             <tr class="spisokTagsColor2">
                                 <td class="col1">Ссылка: </td>
-                                <td class="col2"><a href="../../ReferRedirect?id=${entry.key.getId()}" target="_blank">${entry.value.getCut_ref()}</a></td>
+                                <td class="col2"><a href="ReferRedirect?id=${entry.key.getId()}" target="_blank">${entry.value.getCut_ref()}</a></td>
                             </tr>
                             <tr class="spisokTagsColor2">
                                 <td class="col1">Тег: </td>
